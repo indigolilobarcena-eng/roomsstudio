@@ -1,21 +1,21 @@
 <!doctype html>
-<html lang="es" class="h-full">
+<html lang="es">
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rooms Interior Design Studio</title>
-  <script src="/_sdk/element_sdk.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&amp;display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
     }
     
-    * {
-      font-family: 'Courier Prime', monospace;
+    body {
+      font-family: 'Futura', 'Century Gothic', 'Trebuchet MS', sans-serif;
+      background-color: #FFFFFF;
+      color: #000000;
     }
     
     .smooth-scroll {
@@ -36,333 +36,226 @@
     .decorative-line {
       width: 60px;
       height: 1px;
-      background-color: currentColor;
+      background-color: #333333;
       margin: 0 auto;
+    }
+
+    nav {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .nav-link {
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover {
+      color: #333333;
+    }
+
+    .mobile-menu-link {
+      transition: background-color 0.3s;
+    }
+
+    .mobile-menu-link:hover {
+      background-color: #F5F5F5;
+    }
+
+    .gallery-image {
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-image:hover {
+      transform: scale(1.05);
+    }
+
+    .social-link {
+      transition: color 0.3s;
+    }
+
+    .social-link:hover {
+      color: #333333;
     }
   </style>
   <style>@view-transition { navigation: auto; }</style>
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
  </head>
- <body class="h-full w-full overflow-auto smooth-scroll">
-  <div id="app" class="w-full h-full"></div>
+ <body class="smooth-scroll"><!-- Navigation Menu -->
+  <nav class="w-full px-4 sm:px-6 py-3 sm:py-4 sticky top-0 z-50 bg-white border-b border-gray-300">
+   <div class="max-w-7xl mx-auto flex items-center justify-between"><img src="https://raw.githubusercontent.com/indigolilobarcena-eng/roomsstudio/refs/heads/main/logo%20rooms.png" alt="Rooms Interior Design Studio" class="h-10 w-auto sm:h-12" onerror="this.style.display='none';"> <!-- Desktop Menu -->
+    <div class="hidden md:flex items-center gap-8"><a href="#esencia" class="nav-link text-sm">Esencia</a> <a href="#filosofia" class="nav-link text-sm">Filosofía</a> <a href="#galeria" class="nav-link text-sm">Galería</a> <a href="#contacto" class="nav-link text-sm">Contacto</a>
+    </div><!-- Mobile Menu Button --> <button id="menu-toggle" class="md:hidden flex items-center justify-center w-11 h-11 text-xl"> <span id="menu-icon">☰</span> </button>
+   </div><!-- Mobile Menu -->
+   <div id="mobile-menu" class="hidden mt-4 pt-4 border-t border-gray-300">
+    <div class="flex flex-col"><a href="#esencia" class="mobile-menu-link mobile-link py-4 px-2 border-b border-gray-200">Esencia</a> <a href="#filosofia" class="mobile-menu-link mobile-link py-4 px-2 border-b border-gray-200">Filosofía</a> <a href="#galeria" class="mobile-menu-link mobile-link py-4 px-2 border-b border-gray-200">Galería</a> <a href="#contacto" class="mobile-menu-link mobile-link py-4 px-2">Contacto</a>
+    </div>
+   </div>
+  </nav><!-- Hero Section -->
+  <section class="w-full px-6 py-20 md:py-32 text-center">
+   <div class="max-w-4xl mx-auto fade-in">
+    <div class="decorative-line mb-8"></div>
+    <h1 class="text-3xl md:text-5xl font-bold mb-6 tracking-tight">Rooms Interior Design Studio</h1>
+    <p class="text-lg md:text-xl text-gray-600 mb-12 tracking-wide">Donde el silencio habla en susurros de belleza</p>
+    <div class="decorative-line"></div>
+   </div>
+  </section><!-- About Section -->
+  <section id="esencia" class="w-full px-6 py-16 md:py-24 bg-gray-100">
+   <div class="max-w-3xl mx-auto text-center fade-in">
+    <h2 class="text-2xl md:text-4xl font-bold mb-8">Nuestra Esencia</h2>
+    <p class="text-base md:text-lg leading-relaxed">Somos alquimistas del espacio y el tiempo. Tejemos luz, textura y memoria en cada estancia. Aquí, el diseño no se observa, se respira. Cada superficie es un lienzo, cada sombra una caricia, cada objeto un verso en la sinfonía del habitar consciente.</p>
+   </div>
+  </section><!-- Philosophy Grid -->
+  <section id="filosofia" class="w-full px-6 py-16 md:py-24">
+   <div class="max-w-6xl mx-auto">
+    <div class="grid md:grid-cols-3 gap-8 md:gap-12"><!-- Mission -->
+     <div class="text-center fade-in border border-gray-300 p-10 bg-gray-50">
+      <div class="text-3xl mb-6">
+       ◈
+      </div>
+      <h3 class="text-xl md:text-2xl font-bold mb-4">Nuestra Promesa</h3>
+      <p class="text-sm leading-relaxed">Esculpir refugios donde el alma se reconoce. Honramos la belleza imperfecta del wabi-sabi, abrazamos la serenidad del vacío, celebramos la historia que guardan las cosas. Creamos espacios que no gritan, sino que susurran elegancia eterna.</p>
+     </div><!-- Vision -->
+     <div class="text-center fade-in border border-gray-300 p-10 bg-gray-50">
+      <div class="text-3xl mb-6">
+       ◈
+      </div>
+      <h3 class="text-xl md:text-2xl font-bold mb-4">Nuestro Horizonte</h3>
+      <p class="text-sm leading-relaxed">Ser poetas del espacio tridimensional. Arquitectos de la quietud. Custodios de una estética donde lo exquisito y lo austero danzan en perfecta armonía. Donde el lujo se mide en silencio, textura y luz tamizada.</p>
+     </div><!-- Values -->
+     <div class="text-center fade-in border border-gray-300 p-10 bg-gray-50">
+      <div class="text-3xl mb-6">
+       ◈
+      </div>
+      <h3 class="text-xl md:text-2xl font-bold mb-6">Nuestra Filosofía</h3>
+      <div class="space-y-4">
+       <div>
+        <p class="font-bold text-sm text-gray-700 mb-1">Contemplación</p>
+        <p class="text-xs leading-relaxed">Diseñamos templos para la mirada serena</p>
+       </div>
+       <div>
+        <p class="font-bold text-sm text-gray-700 mb-1">Impermanencia</p>
+        <p class="text-xs leading-relaxed">Celebramos la belleza que envejece con gracia</p>
+       </div>
+       <div>
+        <p class="font-bold text-sm text-gray-700 mb-1">Esencialidad</p>
+        <p class="text-xs leading-relaxed">Lo superfluo se disuelve, lo verdadero permanece</p>
+       </div>
+       <div>
+        <p class="font-bold text-sm text-gray-700 mb-1">Alma</p>
+        <p class="text-xs leading-relaxed">Cada espacio late con vida propia</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Gallery Section -->
+  <section id="galeria" class="w-full px-6 py-16 md:py-24">
+   <div class="max-w-7xl mx-auto fade-in">
+    <h2 class="text-2xl md:text-4xl font-bold text-center mb-12">Nuestra Galería</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+     <div class="overflow-hidden border border-gray-300 aspect-[4/3]"><img src="https://raw.githubusercontent.com/indigolilobarcena-eng/roomsstudio/refs/heads/main/eclectico%20.jpg" alt="Proyecto 1" class="w-full h-full object-cover gallery-image" onerror="this.style.display='none';">
+     </div>
+     <div class="overflow-hidden border border-gray-300 aspect-[4/3]"><img src="https://raw.githubusercontent.com/indigolilobarcena-eng/roomsstudio/refs/heads/main/2.jpg" alt="Proyecto 2" class="w-full h-full object-cover gallery-image" onerror="this.style.display='none';">
+     </div>
+     <div class="overflow-hidden border border-gray-300 aspect-[4/3]"><img src="https://raw.githubusercontent.com/indigolilobarcena-eng/roomsstudio/refs/heads/main/4.jpg" alt="Proyecto 3" class="w-full h-full object-cover gallery-image" onerror="this.style.display='none';">
+     </div>
+     <div class="overflow-hidden border border-gray-300 aspect-[4/3]"><img src="https://raw.githubusercontent.com/indigolilobarcena-eng/roomsstudio/refs/heads/main/5.jpg" alt="Proyecto 4" class="w-full h-full object-cover gallery-image" onerror="this.style.display='none';">
+     </div>
+     <div class="overflow-hidden border border-gray-300 aspect-[4/3]"><img src="https://raw.githubusercontent.com/indigolilobarcena-eng/roomsstudio/refs/heads/main/6.jpg" alt="Proyecto 5" class="w-full h-full object-cover gallery-image" onerror="this.style.display='none';">
+     </div>
+     <div class="overflow-hidden border border-gray-300 aspect-[4/3]"><img src="https://raw.githubusercontent.com/indigolilobarcena-eng/roomsstudio/refs/heads/main/9.jpg" alt="Proyecto 6" class="w-full h-full object-cover gallery-image" onerror="this.style.display='none';">
+     </div>
+     <div class="overflow-hidden border border-gray-300 aspect-[4/3]"><img src="https://raw.githubusercontent.com/indigolilobarcena-eng/roomsstudio/refs/heads/main/1%20deco%20(1).jpg" alt="Proyecto 7" class="w-full h-full object-cover gallery-image" onerror="this.style.display='none';">
+     </div>
+     <div class="overflow-hidden border border-gray-300 aspect-[4/3]"><img src="https://raw.githubusercontent.com/indigolilobarcena-eng/roomsstudio/refs/heads/main/1%20deco%20(2).jpg" alt="Proyecto 8" class="w-full h-full object-cover gallery-image" onerror="this.style.display='none';">
+     </div>
+     <div class="overflow-hidden border border-gray-300 aspect-[4/3]"><img src="https://raw.githubusercontent.com/indigolilobarcena-eng/roomsstudio/refs/heads/main/1%20deco%20(4).jpg" alt="Proyecto 9" class="w-full h-full object-cover gallery-image" onerror="this.style.display='none';">
+     </div>
+     <div class="overflow-hidden border border-gray-300 aspect-[4/3]"><img src="https://raw.githubusercontent.com/indigolilobarcena-eng/roomsstudio/refs/heads/main/1%20deco%20(6).jpg" alt="Proyecto 10" class="w-full h-full object-cover gallery-image" onerror="this.style.display='none';">
+     </div>
+     <div class="overflow-hidden border border-gray-300 aspect-[4/3]"><img src="https://raw.githubusercontent.com/indigolilobarcena-eng/roomsstudio/refs/heads/main/1%20deco%20(9).jpg" alt="Proyecto 11" class="w-full h-full object-cover gallery-image" onerror="this.style.display='none';">
+     </div>
+     <div class="overflow-hidden border border-gray-300 aspect-[4/3]"><img src="https://raw.githubusercontent.com/indigolilobarcena-eng/roomsstudio/refs/heads/main/1%20deco%20(8).jpg" alt="Proyecto 12" class="w-full h-full object-cover gallery-image" onerror="this.style.display='none';">
+     </div>
+     <div class="overflow-hidden border border-gray-300 aspect-[4/3]"><img src="https://raw.githubusercontent.com/indigolilobarcena-eng/roomsstudio/refs/heads/main/1%20deco%20(7).jpg" alt="Proyecto 13" class="w-full h-full object-cover gallery-image" onerror="this.style.display='none';">
+     </div>
+     <div class="overflow-hidden border border-gray-300 aspect-[4/3]"><img src="https://raw.githubusercontent.com/indigolilobarcena-eng/roomsstudio/refs/heads/main/sillones%20(1).jpg" alt="Proyecto 14" class="w-full h-full object-cover gallery-image" onerror="this.style.display='none';">
+     </div>
+     <div class="overflow-hidden border border-gray-300 aspect-[4/3]"><img src="https://raw.githubusercontent.com/indigolilobarcena-eng/roomsstudio/refs/heads/main/sillones%20(2).jpg" alt="Proyecto 15" class="w-full h-full object-cover gallery-image" onerror="this.style.display='none';">
+     </div>
+     <div class="overflow-hidden border border-gray-300 aspect-[4/3]"><img src="https://raw.githubusercontent.com/indigolilobarcena-eng/roomsstudio/refs/heads/main/sillones%20(3).jpg" alt="Proyecto 16" class="w-full h-full object-cover gallery-image" onerror="this.style.display='none';">
+     </div>
+     <div class="overflow-hidden border border-gray-300 aspect-[4/3]"><img src="https://raw.githubusercontent.com/indigolilobarcena-eng/roomsstudio/refs/heads/main/sillones%20(4).jpg" alt="Proyecto 17" class="w-full h-full object-cover gallery-image" onerror="this.style.display='none';">
+     </div>
+     <div class="overflow-hidden border border-gray-300 aspect-[4/3]"><img src="https://raw.githubusercontent.com/indigolilobarcena-eng/roomsstudio/refs/heads/main/sillones%20(6).jpg" alt="Proyecto 18" class="w-full h-full object-cover gallery-image" onerror="this.style.display='none';">
+     </div>
+    </div>
+   </div>
+  </section><!-- Contact Section -->
+  <section id="contacto" class="w-full px-6 py-16 md:py-24 bg-gray-100">
+   <div class="max-w-5xl mx-auto fade-in">
+    <h2 class="text-2xl md:text-4xl font-bold text-center mb-12">Encuéntranos</h2>
+    <div class="grid md:grid-cols-2 gap-8 md:gap-12"><!-- Contact Info -->
+     <div class="p-8 border border-gray-300">
+      <h3 class="text-xl font-bold mb-6 text-gray-700">Visítanos</h3>
+      <div class="space-y-4">
+       <div>
+        <p class="text-sm text-gray-500 mb-1">Dirección</p>
+        <p class="text-base">Toltecas #166, San Pedro de los Pinos, 01180</p>
+       </div>
+       <div>
+        <p class="text-sm text-gray-500 mb-1">Teléfono</p><a href="tel:5610516440" class="text-base nav-link">56 1051 6440</a>
+       </div>
+       <div>
+        <p class="text-sm text-gray-500 mb-1">Sitio Web</p><a href="https://www.RoomsInteriorDesignStudio.com" target="_blank" rel="noopener noreferrer" class="text-base nav-link">www.RoomsInteriorDesignStudio.com</a>
+       </div>
+      </div>
+     </div><!-- Social Media -->
+     <div class="p-8 border border-gray-300">
+      <h3 class="text-xl font-bold mb-6 text-gray-700">Síguenos</h3>
+      <div class="space-y-4"><a href="https://www.instagram.com/roomsinteriordesign" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 social-link py-2"> <span class="text-2xl">📷</span> <span class="text-base">Instagram</span> </a> <a href="https://www.facebook.com/roomsinteriordesign" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 social-link py-2"> <span class="text-2xl">👥</span> <span class="text-base">Facebook</span> </a> <a href="https://www.tiktok.com/@roomsinteriordesign" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 social-link py-2"> <span class="text-2xl">🎵</span> <span class="text-base">TikTok</span> </a> <a href="https://www.pinterest.com/roomsinteriordesign" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 social-link py-2"> <span class="text-2xl">📌</span> <span class="text-base">Pinterest</span> </a> <a href="https://github.com/roomsinteriordesign" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 social-link py-2"> <span class="text-2xl">🔧</span> <span class="text-base">GitHub</span> </a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Footer -->
+  <footer class="w-full px-6 py-12 text-center border-t border-gray-300">
+   <p class="text-sm text-gray-600">© 2024 Rooms Interior Design Studio. Todos los derechos reservados.</p>
+  </footer>
   <script>
-    const defaultConfig = {
-      background_color: "#F5F1E8",
-      text_color: "#3D3428",
-      accent_color: "#8B7355",
-      surface_color: "#EDE7DC",
-      secondary_action_color: "#A68A6D",
-      font_family: "Courier Prime",
-      font_size: 16,
-      company_name: "Rooms Interior Design Studio",
-      tagline: "Donde el silencio habla en susurros de belleza",
-      about_title: "Nuestra Esencia",
-      about_text: "Somos alquimistas del espacio y el tiempo. Tejemos luz, textura y memoria en cada estancia. Aquí, el diseño no se observa, se respira. Cada superficie es un lienzo, cada sombra una caricia, cada objeto un verso en la sinfonía del habitar consciente.",
-      mission_title: "Nuestra Promesa",
-      mission_text: "Esculpir refugios donde el alma se reconoce. Honramos la belleza imperfecta del wabi-sabi, abrazamos la serenidad del vacío, celebramos la historia que guardan las cosas. Creamos espacios que no gritan, sino que susurran elegancia eterna.",
-      vision_title: "Nuestro Horizonte",
-      vision_text: "Ser poetas del espacio tridimensional. Arquitectos de la quietud. Custodios de una estética donde lo exquisito y lo austero danzan en perfecta armonía. Donde el lujo se mide en silencio, textura y luz tamizada.",
-      values_title: "Nuestra Filosofía",
-      footer_text: "© 2024 Rooms Interior Design Studio. Todos los derechos reservados.",
-      address: "Toltecas #166, San Pedro de los Pinos, 01180",
-      phone: "56 1051 6440",
-      website: "www.RoomsInteriorDesignStudio.com",
-      menu_open: false
-    };
-
-    const values = [
-      { title: "Contemplación", description: "Diseñamos templos para la mirada serena" },
-      { title: "Impermanencia", description: "Celebramos la belleza que envejece con gracia" },
-      { title: "Esencialidad", description: "Lo superfluo se disuelve, lo verdadero permanece" },
-      { title: "Alma", description: "Cada espacio late con vida propia" }
-    ];
-
-    async function onConfigChange(config) {
-      const baseSize = config.font_size || defaultConfig.font_size;
-      const customFont = config.font_family || defaultConfig.font_family;
-      const baseFontStack = 'monospace';
-      
-      document.body.style.backgroundColor = config.background_color || defaultConfig.background_color;
-      document.body.style.color = config.text_color || defaultConfig.text_color;
-      
-      const app = document.getElementById('app');
-      app.innerHTML = `
-        <div class="w-full min-h-full" style="background-color: ${config.background_color || defaultConfig.background_color}; color: ${config.text_color || defaultConfig.text_color};">
-          
-          <!-- Navigation Menu -->
-          <nav class="w-full px-6 py-4 sticky top-0 z-50" style="background-color: ${config.background_color || defaultConfig.background_color}; border-bottom: 1px solid ${config.accent_color || defaultConfig.accent_color};">
-            <div class="max-w-7xl mx-auto flex items-center justify-between">
-              <div style="font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 1.1}px; font-weight: 700; letter-spacing: 0.05em;">ROOMS</div>
-              
-              <!-- Desktop Menu -->
-              <div class="hidden md:flex items-center gap-8">
-                <a href="#esencia" style="font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.9}px; color: ${config.text_color || defaultConfig.text_color}; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='${config.accent_color || defaultConfig.accent_color}'" onmouseout="this.style.color='${config.text_color || defaultConfig.text_color}'">Esencia</a>
-                <a href="#filosofia" style="font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.9}px; color: ${config.text_color || defaultConfig.text_color}; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='${config.accent_color || defaultConfig.accent_color}'" onmouseout="this.style.color='${config.text_color || defaultConfig.text_color}'">Filosofía</a>
-                <a href="#contacto" style="font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.9}px; color: ${config.text_color || defaultConfig.text_color}; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='${config.accent_color || defaultConfig.accent_color}'" onmouseout="this.style.color='${config.text_color || defaultConfig.text_color}'">Contacto</a>
-              </div>
-              
-              <!-- Mobile Menu Button -->
-              <button id="menu-toggle" class="md:hidden" style="background: none; border: none; cursor: pointer; padding: 0.5rem; color: ${config.text_color || defaultConfig.text_color}; font-size: ${baseSize * 1.5}px;">
-                <span id="menu-icon">☰</span>
-              </button>
-            </div>
-            
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" style="display: none; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid ${config.accent_color || defaultConfig.accent_color};">
-              <div class="flex flex-col gap-4">
-                <a href="#esencia" class="mobile-link" style="font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.9}px; color: ${config.text_color || defaultConfig.text_color}; text-decoration: none;">Esencia</a>
-                <a href="#filosofia" class="mobile-link" style="font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.9}px; color: ${config.text_color || defaultConfig.text_color}; text-decoration: none;">Filosofía</a>
-                <a href="#contacto" class="mobile-link" style="font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.9}px; color: ${config.text_color || defaultConfig.text_color}; text-decoration: none;">Contacto</a>
-              </div>
-            </div>
-          </nav>
-          
-          <!-- Hero Section -->
-          <section class="w-full px-6 py-20 md:py-32 text-center">
-            <div class="max-w-4xl mx-auto fade-in">
-              <div class="decorative-line mb-8" style="background-color: ${config.accent_color || defaultConfig.accent_color};"></div>
-              <h1 id="company-name" class="mb-6" style="font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 2.5}px; font-weight: 700; letter-spacing: -0.02em;">${config.company_name || defaultConfig.company_name}</h1>
-              <p id="tagline" class="mb-12" style="font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 1.25}px; color: ${config.accent_color || defaultConfig.accent_color}; letter-spacing: 0.05em;">${config.tagline || defaultConfig.tagline}</p>
-              <div class="decorative-line" style="background-color: ${config.accent_color || defaultConfig.accent_color};"></div>
-            </div>
-          </section>
-
-          <!-- About Section -->
-          <section id="esencia" class="w-full px-6 py-16 md:py-24" style="background-color: ${config.surface_color || defaultConfig.surface_color};">
-            <div class="max-w-3xl mx-auto text-center fade-in">
-              <h2 id="about-title" class="mb-8" style="font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 2}px; font-weight: 700;">${config.about_title || defaultConfig.about_title}</h2>
-              <p id="about-text" style="font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 1.125}px; line-height: 1.8; max-width: 700px; margin: 0 auto;">${config.about_text || defaultConfig.about_text}</p>
-            </div>
-          </section>
-
-          <!-- Philosophy Grid -->
-          <section id="filosofia" class="w-full px-6 py-16 md:py-24">
-            <div class="max-w-6xl mx-auto">
-              <div class="grid md:grid-cols-3 gap-8 md:gap-12">
-                
-                <!-- Mission -->
-                <div class="text-center fade-in" style="border: 1px solid ${config.accent_color || defaultConfig.accent_color}; padding: 2.5rem; background-color: ${config.surface_color || defaultConfig.surface_color};">
-                  <div class="mb-6" style="font-size: ${baseSize * 2}px;">◇</div>
-                  <h3 id="mission-title" class="mb-4" style="font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 1.5}px; font-weight: 700;">${config.mission_title || defaultConfig.mission_title}</h3>
-                  <p id="mission-text" style="font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.9}px; line-height: 1.7;">${config.mission_text || defaultConfig.mission_text}</p>
-                </div>
-
-                <!-- Vision -->
-                <div class="text-center fade-in" style="border: 1px solid ${config.accent_color || defaultConfig.accent_color}; padding: 2.5rem; background-color: ${config.surface_color || defaultConfig.surface_color};">
-                  <div class="mb-6" style="font-size: ${baseSize * 2}px;">◆</div>
-                  <h3 id="vision-title" class="mb-4" style="font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 1.5}px; font-weight: 700;">${config.vision_title || defaultConfig.vision_title}</h3>
-                  <p id="vision-text" style="font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.9}px; line-height: 1.7;">${config.vision_text || defaultConfig.vision_text}</p>
-                </div>
-
-                <!-- Values -->
-                <div class="text-center fade-in" style="border: 1px solid ${config.accent_color || defaultConfig.accent_color}; padding: 2.5rem; background-color: ${config.surface_color || defaultConfig.surface_color};">
-                  <div class="mb-6" style="font-size: ${baseSize * 2}px;">◈</div>
-                  <h3 id="values-title" class="mb-6" style="font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 1.5}px; font-weight: 700;">${config.values_title || defaultConfig.values_title}</h3>
-                  <div class="space-y-4">
-                    ${values.map(value => `
-                      <div>
-                        <p style="font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.95}px; font-weight: 700; margin-bottom: 0.25rem; color: ${config.accent_color || defaultConfig.accent_color};">${value.title}</p>
-                        <p style="font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.85}px; line-height: 1.5;">${value.description}</p>
-                      </div>
-                    `).join('')}
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </section>
-
-          <!-- Contact Section -->
-          <section id="contacto" class="w-full px-6 py-16 md:py-24" style="background-color: ${config.surface_color || defaultConfig.surface_color};">
-            <div class="max-w-5xl mx-auto fade-in">
-              <h2 class="text-center mb-12" style="font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 2}px; font-weight: 700;">Encuéntranos</h2>
-              
-              <div class="grid md:grid-cols-2 gap-8 md:gap-12">
-                
-                <!-- Contact Info -->
-                <div style="padding: 2rem; border: 1px solid ${config.accent_color || defaultConfig.accent_color};">
-                  <h3 class="mb-6" style="font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 1.3}px; font-weight: 700; color: ${config.accent_color || defaultConfig.accent_color};">Visítanos</h3>
-                  
-                  <div class="space-y-4">
-                    <div>
-                      <p style="font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.85}px; color: ${config.secondary_action_color || defaultConfig.secondary_action_color}; margin-bottom: 0.25rem;">Dirección</p>
-                      <p id="address" style="font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.95}px; line-height: 1.6;">${config.address || defaultConfig.address}</p>
-                    </div>
-                    
-                    <div>
-                      <p style="font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.85}px; color: ${config.secondary_action_color || defaultConfig.secondary_action_color}; margin-bottom: 0.25rem;">Teléfono</p>
-                      <a href="tel:5610516440" id="phone" style="font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.95}px; color: ${config.text_color || defaultConfig.text_color}; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='${config.accent_color || defaultConfig.accent_color}'" onmouseout="this.style.color='${config.text_color || defaultConfig.text_color}'">${config.phone || defaultConfig.phone}</a>
-                    </div>
-                    
-                    <div>
-                      <p style="font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.85}px; color: ${config.secondary_action_color || defaultConfig.secondary_action_color}; margin-bottom: 0.25rem;">Sitio Web</p>
-                      <a href="https://www.RoomsInteriorDesignStudio.com" target="_blank" rel="noopener noreferrer" id="website" style="font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.95}px; color: ${config.text_color || defaultConfig.text_color}; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='${config.accent_color || defaultConfig.accent_color}'" onmouseout="this.style.color='${config.text_color || defaultConfig.text_color}'">${config.website || defaultConfig.website}</a>
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Social Media -->
-                <div style="padding: 2rem; border: 1px solid ${config.accent_color || defaultConfig.accent_color};">
-                  <h3 class="mb-6" style="font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 1.3}px; font-weight: 700; color: ${config.accent_color || defaultConfig.accent_color};">Síguenos</h3>
-                  
-                  <div class="space-y-4">
-                    <a href="https://www.instagram.com/roomsinteriordesign" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 0.75rem; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.95}px; color: ${config.text_color || defaultConfig.text_color}; text-decoration: none; transition: color 0.3s; padding: 0.5rem 0;" onmouseover="this.style.color='${config.accent_color || defaultConfig.accent_color}'" onmouseout="this.style.color='${config.text_color || defaultConfig.text_color}'">
-                      <span style="font-size: ${baseSize * 1.5}px;">📷</span>
-                      <span>Instagram</span>
-                    </a>
-                    
-                    <a href="https://www.facebook.com/roomsinteriordesign" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 0.75rem; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.95}px; color: ${config.text_color || defaultConfig.text_color}; text-decoration: none; transition: color 0.3s; padding: 0.5rem 0;" onmouseover="this.style.color='${config.accent_color || defaultConfig.accent_color}'" onmouseout="this.style.color='${config.text_color || defaultConfig.text_color}'">
-                      <span style="font-size: ${baseSize * 1.5}px;">👥</span>
-                      <span>Facebook</span>
-                    </a>
-                    
-                    <a href="https://www.tiktok.com/@roomsinteriordesign" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 0.75rem; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.95}px; color: ${config.text_color || defaultConfig.text_color}; text-decoration: none; transition: color 0.3s; padding: 0.5rem 0;" onmouseover="this.style.color='${config.accent_color || defaultConfig.accent_color}'" onmouseout="this.style.color='${config.text_color || defaultConfig.text_color}'">
-                      <span style="font-size: ${baseSize * 1.5}px;">🎵</span>
-                      <span>TikTok</span>
-                    </a>
-                    
-                    <a href="https://www.pinterest.com/roomsinteriordesign" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 0.75rem; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.95}px; color: ${config.text_color || defaultConfig.text_color}; text-decoration: none; transition: color 0.3s; padding: 0.5rem 0;" onmouseover="this.style.color='${config.accent_color || defaultConfig.accent_color}'" onmouseout="this.style.color='${config.text_color || defaultConfig.text_color}'">
-                      <span style="font-size: ${baseSize * 1.5}px;">📌</span>
-                      <span>Pinterest</span>
-                    </a>
-                    
-                    <a href="https://github.com/roomsinteriordesign" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 0.75rem; font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.95}px; color: ${config.text_color || defaultConfig.text_color}; text-decoration: none; transition: color 0.3s; padding: 0.5rem 0;" onmouseover="this.style.color='${config.accent_color || defaultConfig.accent_color}'" onmouseout="this.style.color='${config.text_color || defaultConfig.text_color}'">
-                      <span style="font-size: ${baseSize * 1.5}px;">🔧</span>
-                      <span>GitHub</span>
-                    </a>
-                  </div>
-                </div>
-                
-              </div>
-            </div>
-          </section>
-
-          <!-- Footer -->
-          <footer class="w-full px-6 py-12 text-center" style="border-top: 1px solid ${config.accent_color || defaultConfig.accent_color};">
-            <p id="footer-text" style="font-family: ${customFont}, ${baseFontStack}; font-size: ${baseSize * 0.85}px; color: ${config.secondary_action_color || defaultConfig.secondary_action_color};">${config.footer_text || defaultConfig.footer_text}</p>
-          </footer>
-
-        </div>
-      `;
-
-      // Fade-in animation on scroll
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      }, { threshold: 0.1 });
-
-      document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-      
-      // Mobile menu toggle
-      const menuToggle = document.getElementById('menu-toggle');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const menuIcon = document.getElementById('menu-icon');
-      
-      if (menuToggle && mobileMenu) {
-        menuToggle.addEventListener('click', () => {
-          if (mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
-            mobileMenu.style.display = 'block';
-            menuIcon.textContent = '✕';
-          } else {
-            mobileMenu.style.display = 'none';
-            menuIcon.textContent = '☰';
-          }
-        });
-        
-        // Close menu when clicking a link
-        document.querySelectorAll('.mobile-link').forEach(link => {
-          link.addEventListener('click', () => {
-            mobileMenu.style.display = 'none';
-            menuIcon.textContent = '☰';
-          });
-        });
-      }
-    }
-
-    function mapToCapabilities(config) {
-      return {
-        recolorables: [
-          {
-            get: () => config.background_color || defaultConfig.background_color,
-            set: (value) => {
-              config.background_color = value;
-              window.elementSdk.setConfig({ background_color: value });
-            }
-          },
-          {
-            get: () => config.surface_color || defaultConfig.surface_color,
-            set: (value) => {
-              config.surface_color = value;
-              window.elementSdk.setConfig({ surface_color: value });
-            }
-          },
-          {
-            get: () => config.text_color || defaultConfig.text_color,
-            set: (value) => {
-              config.text_color = value;
-              window.elementSdk.setConfig({ text_color: value });
-            }
-          },
-          {
-            get: () => config.accent_color || defaultConfig.accent_color,
-            set: (value) => {
-              config.accent_color = value;
-              window.elementSdk.setConfig({ accent_color: value });
-            }
-          },
-          {
-            get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
-            set: (value) => {
-              config.secondary_action_color = value;
-              window.elementSdk.setConfig({ secondary_action_color: value });
-            }
-          }
-        ],
-        borderables: [],
-        fontEditable: {
-          get: () => config.font_family || defaultConfig.font_family,
-          set: (value) => {
-            config.font_family = value;
-            window.elementSdk.setConfig({ font_family: value });
-          }
-        },
-        fontSizeable: {
-          get: () => config.font_size || defaultConfig.font_size,
-          set: (value) => {
-            config.font_size = value;
-            window.elementSdk.setConfig({ font_size: value });
-          }
+    // Fade-in animation on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
         }
-      };
-    }
+      });
+    }, { threshold: 0.1 });
 
-    function mapToEditPanelValues(config) {
-      return new Map([
-        ["company_name", config.company_name || defaultConfig.company_name],
-        ["tagline", config.tagline || defaultConfig.tagline],
-        ["about_title", config.about_title || defaultConfig.about_title],
-        ["about_text", config.about_text || defaultConfig.about_text],
-        ["mission_title", config.mission_title || defaultConfig.mission_title],
-        ["mission_text", config.mission_text || defaultConfig.mission_text],
-        ["vision_title", config.vision_title || defaultConfig.vision_title],
-        ["vision_text", config.vision_text || defaultConfig.vision_text],
-        ["values_title", config.values_title || defaultConfig.values_title],
-        ["address", config.address || defaultConfig.address],
-        ["phone", config.phone || defaultConfig.phone],
-        ["website", config.website || defaultConfig.website],
-        ["footer_text", config.footer_text || defaultConfig.footer_text]
-      ]);
-    }
-
-    window.elementSdk.init({
-      defaultConfig,
-      onConfigChange,
-      mapToCapabilities,
-      mapToEditPanelValues
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    
+    menuToggle.addEventListener('click', () => {
+      if (mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.remove('hidden');
+        menuIcon.textContent = '✕';
+      } else {
+        mobileMenu.classList.add('hidden');
+        menuIcon.textContent = '☰';
+      }
+    });
+    
+    // Close menu when clicking a link
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.textContent = '☰';
+      });
     });
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b56f24c23afeef2',t:'MTc2Njk4NjY1Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b5c5127d090eef2',t:'MTc2NzA0Mjk3MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
